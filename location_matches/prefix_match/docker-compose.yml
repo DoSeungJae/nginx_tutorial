@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-container4
+    ports:
+      - "801:801"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    extra_hosts:
+      - "nginx-handbook.test:127.0.0.1"
+      
+    restart: always
