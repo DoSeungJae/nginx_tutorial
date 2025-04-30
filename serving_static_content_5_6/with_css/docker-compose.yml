@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-container6
+    ports:
+      - "801:801"
+    volumes:
+      - /srv/nginx-handbook-projects/static-demo:/srv/nginx-handbook-projects/static-demo   #좌측은 local(codespace), 우측은 docker 상의 경로
+      - ./nginx.conf:/etc/nginx/nginx.conf  
+    extra_hosts:
+      - "nginx-handbook.test:127.0.0.1"
+    restart: always
