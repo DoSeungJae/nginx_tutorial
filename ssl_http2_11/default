@@ -1,0 +1,6 @@
+server {
+        listen 81;
+        server_name nginx-handbook.farhan.dev;  
+
+        root /srv/nginx-handbook-projects/static-demo;
+}
